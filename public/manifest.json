@@ -1,0 +1,60 @@
+{
+    "name": "Fotogalerija",
+    "short_name": "Fotogalerija",
+    "description": "Aplikacija za stvaranje i pregledavanje galerija korisnika",
+    "start_url": "/",
+    "scope": ".",
+    "display": "standalone",
+    "display_override": ["fullscreen", "minimal-ui", "browser"],
+    "orientation": "portrait",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+      {
+        "src": "/flickr.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/gallery.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/instagram.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/people.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/recycle-bin.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/thumbs-up.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/vsco.png",
+        "sizes": "1200x675",
+        "type": "image/png"
+      },
+      {
+        "src": "/download.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }, 
+      {
+        "src": "/alarm.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

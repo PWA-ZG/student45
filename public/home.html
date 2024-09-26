@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="home.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <header>
+    <div class="app-title">
+      <h1>Fotogalerija</h1>
+    </div>
+    <nav>
+      <ul>
+          <li><a href="/profile" id="profileLink">Pogledaj svoj profil</a></li>
+      </ul>
+    </nav>
+    <div class="app-icon">
+      <img src="/gallery.png" alt="App Icon">
+    </div>
+  </header>
+
+  <main>
+    <h2>Dobrodošli na Fotogaleriju!</h2><br />
+    <span id="downloadText">Preuzmi aplikaciju</span>
+    <button id="installButton">
+      <img src="/download.png" alt="Preuzmi aplikaciju" id="download"/>
+    </button>
+    <h3>Ovdje možete pretražiti korisnike i pregledati njihove galerije, te lajkati slike. </h3>
+    <h4>Po svojim funkcionalnostima aplikacija podsjeća na jednostavnu verziju drugih poznatih aplikacija.</h4>
+    <div class="aplikacije">
+      <img src="/instagram.png" alt="Instagram" id="ig"/>
+      <img src="/flickr.png" alt="Flickr" id="flickr"/>
+      <img src="/vsco.png" alt="vsco" id="vsco"/>
+    </div>
+    <h3>Svoju galeriju možete pogledati i urediti klikom na gumb Pogledaj svoj profil koji se nalazi u zaglavlju stranice. </h3>
+    <section id="searchSection">
+      <img src="/people.png" alt="Search Users" id="searchUsers"/>
+      <input type="text" id="searchInput" placeholder="Pretraži korisnike">
+      <button type="button" id="searchButton">OK</button>
+      <span id="messageSpan"></span>
+    </section>
+
+    <section id="gallerySection">
+      <div id="imageGallery"></div>
+  </section>
+  </main>
+
+  <script type="module" src="home.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { type: 'module' })
+            .then(registration => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(error => {
+                console.error('Service Worker registration failed:', error);
+            });
+    }
+</script>
+</body>
+</html>

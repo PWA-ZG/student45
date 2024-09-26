@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregled Profila</title>
+    <link rel="stylesheet" type="text/css" href="profil.css">
+</head>
+<body>
+    <header>
+        <div class="app-title">
+            <h1>Fotogalerija</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/" id="logoutLink">Logout</a></li>
+                <li><a href="/" id="homeLink">Početna stranica</a></li>
+            </ul>
+        </nav>
+        <div class="app-icon">
+            <img src="/gallery.png" alt="App Icon">
+        </div>
+    </header>
+
+    <main>
+        <section id="profileSection">
+            <h2>Korisnički Profil</h2>
+            <p id="usernameDisplay">Korisničko ime: <span id="username"></span></p>
+            <button id="notificationButton">
+                <img src="/alarm.png" alt="Notification" id="notificationIcon"/></button>
+            <button id="addImageButton">Dodaj fotografiju</button>
+        </section>
+        <section id="gallerySection">
+            <button onclick="osvjeziStranicu()" id="refreshButton">Refresh</button>
+            <h2>Galerija</h2>
+            <div id="imageGallery"></div>
+        </section>
+    </main>
+    <script type="module" src="profil.js"></script>
+    <script type="module" src="gallery.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', { type: 'module' })
+                .then(registration => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(error => {
+                    console.error('Service Worker registration failed:', error);
+                });
+        }
+    </script>
+    <script>
+        function osvjeziStranicu() {
+            location.reload(true);
+        }
+    </script>
+</body>
+</html>

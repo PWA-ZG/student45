@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    background-color: #E8F4FF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #339FFF;
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.app-title {
+    display: flex;
+    align-items: center;
+}
+
+.app-title h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.app-icon img {
+    max-width: 30px; 
+    max-height: 30px;
+    margin-right: 30px;
+}
+
+main {
+    padding: 80px 20px 20px; 
+}
+
+#searchSection {
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+#searchButton {
+    padding: 8px;
+    cursor: pointer;
+    background-color: #339FFF;
+    color: white;
+    border: none;
+}
+
+ 
+#searchButton:hover {
+    background-color: #3192EA;
+}
+
+#imageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;  
+}
+
+#imageGallery img {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.likeButton,
+.likesCount {
+    margin-top: 5px;
+}
+
+.likeButton {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.likesCount {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+
+button #like {
+    width: 20px;  
+    height: 20px;  
+    object-fit: cover;  
+    cursor: pointer;
+    border-radius: 0%;
+}
+
+#searchUsers {
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 5px;
+}
+  
+h2 {
+    text-align: center;
+}
+
+.aplikacije {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  .aplikacije img {
+    width: 8%; 
+    height: auto; 
+    margin-left: 20px;
+  }
+
+  #messageSpan {
+    display: block;
+    margin-top: 10px; 
+}
+
+#installButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+#download {
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+#downloadText {
+    font-size: large;
+    vertical-align: top;
+    display: none;
+}
+
+button:disabled {
+    opacity: 0.6;
+    background-color: #ccc;
+    color: #999;
+  }
